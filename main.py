@@ -1,8 +1,7 @@
 import telebot
-import  requests
+
 from config import keys, TOKEN
 from utils import CovertionException, CryptoConverter
-
 
 bot = telebot.TeleBot(TOKEN)
 
@@ -26,12 +25,14 @@ def convert(message: telebot.types.Message):
             raise CovertionException('Wrong parameters')
         quote, base, amount = values
         total_base = CryptoConverter.convert(quote, base, amount)
+
     except CovertionException as e:
         bot.reply_to(message, f'User error: {e}')
+
     except Exception as e:
         bot.reply_to(message, f'Error : {e}')
     else:
-        text = f'Price {amount} {quote} in {base} - {total_base}'
+        text = f'Price {amount} {quote} in {base} : {total_base * float(amount)}'
         bot.send_message(message.chat.id, text)
 
 

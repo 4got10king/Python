@@ -1,6 +1,10 @@
-import requests
 import json
+
+import requests
+
 from config import keys
+
+
 class CovertionException(Exception):
     pass
 class CryptoConverter:
