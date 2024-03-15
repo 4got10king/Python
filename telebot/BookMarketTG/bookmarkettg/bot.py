@@ -4,13 +4,11 @@ import logging
 import message_txt
 import os
 
-
-from dotenv import load_dotenv
-from telegram import Update
+from dotenv import load_dotenve
 from telegram.ext import ApplicationBuilder, ContextTypes, CommandHandler
-from telegram.ext import CommandHandler
 
 load_dotenv()
+
 TOKEN = os.getenv('TOKEN')
 
 logging.basicConfig(
