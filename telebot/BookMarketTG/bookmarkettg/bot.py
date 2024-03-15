@@ -1,10 +1,10 @@
 import asyncio
-import telegram
 import logging
-import message_txt
 import os
 
-from dotenv import load_dotenve
+from telegram import Update
+from message_txt import START
+from dotenv import load_dotenv
 from telegram.ext import ApplicationBuilder, ContextTypes, CommandHandler
 
 load_dotenv()
@@ -20,7 +20,7 @@ logging.basicConfig(
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(
         chat_id=update.effective_chat.id,
-        text="Привет, я бот!"
+        text=START
     )
 
 if __name__ == '__main__':
