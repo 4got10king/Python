@@ -4,6 +4,7 @@ import telegram
 import logging
 from telegram import Update
 from telegram.ext import ApplicationBuilder, ContextTypes, CommandHandler
+from telegram.ext import CommandHandler
 
 from tokken import TELEGRAM_BOT_TOKEN
 
@@ -13,8 +14,12 @@ logging.basicConfig(
     level=logging.INFO
 )
 
+
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await context.bot.send_message(chat_id=update.effective_chat.id, text="I'm a bot, please talk to me!")
+    await context.bot.send_message(
+        chat_id=update.effective_chat.id,
+        text="Привет, я бот!"
+    )
 
 if __name__ == '__main__':
     application = ApplicationBuilder().token(TELEGRAM_BOT_TOKEN).build()
@@ -24,8 +29,4 @@ if __name__ == '__main__':
     
     application.run_polling()
 
-async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await context.bot.send_message(
-        chat_id=update.effective_chat.id,
-        text="I'm a bot, please talk to me!"
-    )
+
