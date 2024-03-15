@@ -8,3 +8,8 @@ poetry - инетересный менеджер пакетов, которым 
 
 python-telegram-bot:
 - Отслеживание команд (booklist, start)  
+
+
+
+tmux:
+- cheking function
