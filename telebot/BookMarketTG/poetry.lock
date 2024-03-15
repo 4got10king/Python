@@ -18,6 +18,14 @@ test = ["anyio", "coverage[toml] (>=7)", "exceptiongroup (>=1.2.0)", "hypothesis
 trio = ["trio (>=0.23)"]
 
 [[package]]
+name = "asyncio"
+version = "3.4.3"
+description = "reference implementation of PEP 3156"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "atomicwrites"
 version = "1.4.1"
 description = "Atomic file writes."
@@ -181,6 +189,17 @@ checkqa-mypy = ["mypy (==v0.761)"]
 testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "requests", "xmlschema"]
 
 [[package]]
+name = "python-dotenv"
+version = "1.0.1"
+description = "Read key-value pairs from a .env file and set them as environment variables"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+cli = ["click (>=5.0)"]
+
+[[package]]
 name = "python-telegram-bot"
 version = "21.0.1"
 description = "We have made you a wrapper you can't refuse"
@@ -229,10 +248,11 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "fee48f7e4275eebac505b69fdf4b6e499bed32093c65aa74a69e4d9c2ab821cc"
+content-hash = "a5307eb338eb881d014dd5fccc191701c7e6bf861935af9e702615b578af9eaf"
 
 [metadata.files]
 anyio = []
+asyncio = []
 atomicwrites = []
 attrs = []
 certifi = []
@@ -247,6 +267,7 @@ packaging = []
 pluggy = []
 py = []
 pytest = []
+python-dotenv = []
 python-telegram-bot = []
 sniffio = []
 typing-extensions = []
