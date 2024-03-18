@@ -7,7 +7,7 @@ poetry - инетересный менеджер пакетов, которым 
 - "exit"
 
 python-telegram-bot:
-- Отслеживание команд (booklist, start)  
+- Отслеживание команд (booklist, start, help)  
 
 
 
