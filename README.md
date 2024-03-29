@@ -1,3 +1,1 @@
 # Python project
-
-Test FastAPI 
